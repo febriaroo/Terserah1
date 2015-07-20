@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69C98E94442EE162DCBC012A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535F74881E309AD9B181B24 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8907404B1B594255005CB3FF /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907404A1B594255005CB3FF /* YelpAPI.swift */; };
+		891A6A3A1B57EAAA0046FCE8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A6A361B57EAAA0046FCE8 /* Restaurant.swift */; };
 		8937B40C1B55505700AD568F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B40B1B55505700AD568F /* AppDelegate.swift */; };
 		8937B40F1B55505700AD568F /* Terserah.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8937B40D1B55505700AD568F /* Terserah.xcdatamodeld */; };
 		8937B4111B55505700AD568F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4101B55505700AD568F /* ViewController.swift */; };
@@ -14,6 +17,8 @@
 		8937B4161B55505700AD568F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8937B4151B55505700AD568F /* Images.xcassets */; };
 		8937B4191B55505700AD568F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8937B4171B55505700AD568F /* LaunchScreen.xib */; };
 		8937B4251B55505700AD568F /* TerserahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4241B55505700AD568F /* TerserahTests.swift */; };
+		8937B4321B55575900AD568F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8937B4311B55575900AD568F /* MapKit.framework */; };
+		898F861A1B5D2C44004EB3E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F86191B5D2C44004EB3E7 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C5234D27C52A3C567B07947 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7535F74881E309AD9B181B24 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwift_Bridging_Header.h; sourceTree = "<group>"; };
+		8907404A1B594255005CB3FF /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
+		891A6A361B57EAAA0046FCE8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		891A6A3F1B58004D0046FCE8 /* Terserah-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Terserah-Bridging-Header.h"; sourceTree = "<group>"; };
 		8937B4061B55505700AD568F /* Terserah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terserah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937B40A1B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8937B40B1B55505700AD568F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +49,10 @@
 		8937B41E1B55505700AD568F /* TerserahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerserahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937B4231B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8937B4241B55505700AD568F /* TerserahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerserahTests.swift; sourceTree = "<group>"; };
+		8937B4311B55575900AD568F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		89420E311B56F90700579D89 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/Pods-Terserah/AFNetworking.framework"; sourceTree = "<group>"; };
+		898F86191B5D2C44004EB3E7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8937B4321B55575900AD568F /* MapKit.framework in Frameworks */,
+				69C98E94442EE162DCBC012A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +75,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72D11E752F06E177C3C5CDB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C5234D27C52A3C567B07947 /* Pods.debug.xcconfig */,
+				A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		890740491B594237005CB3FF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8907404A1B594255005CB3FF /* YelpAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		891A6A351B57EAAA0046FCE8 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				891A6A361B57EAAA0046FCE8 /* Restaurant.swift */,
+				898F86191B5D2C44004EB3E7 /* Location.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		891A6A371B57EAAA0046FCE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		891A6A381B57EAAA0046FCE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		891A6A391B57EAAA0046FCE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8937B3FD1B55505700AD568F = {
 			isa = PBXGroup;
 			children = (
+				8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */,
+				8937B4311B55575900AD568F /* MapKit.framework */,
 				8937B4081B55505700AD568F /* Terserah */,
 				8937B4211B55505700AD568F /* TerserahTests */,
 				8937B4071B55505700AD568F /* Products */,
+				B8D9B43CAD5B9ADC71BF43F2 /* Frameworks */,
+				72D11E752F06E177C3C5CDB4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +147,12 @@
 		8937B4081B55505700AD568F /* Terserah */ = {
 			isa = PBXGroup;
 			children = (
+				890740491B594237005CB3FF /* API */,
+				891A6A3F1B58004D0046FCE8 /* Terserah-Bridging-Header.h */,
+				891A6A351B57EAAA0046FCE8 /* Class */,
+				891A6A371B57EAAA0046FCE8 /* Controller */,
+				891A6A381B57EAAA0046FCE8 /* Model */,
+				891A6A391B57EAAA0046FCE8 /* View */,
 				8937B40B1B55505700AD568F /* AppDelegate.swift */,
 				8937B4101B55505700AD568F /* ViewController.swift */,
 				8937B4121B55505700AD568F /* Main.storyboard */,
@@ -115,6 +189,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		895AE7791B56F10D00C215E7 /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Target Support Files";
+			path = "Terserah/Pods/Target Support Files";
+			sourceTree = "<group>";
+		};
+		B8D9B43CAD5B9ADC71BF43F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89420E311B56F90700579D89 /* AFNetworking.framework */,
+				895AE7791B56F10D00C215E7 /* Target Support Files */,
+				7535F74881E309AD9B181B24 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8937B4281B55505700AD568F /* Build configuration list for PBXNativeTarget "Terserah" */;
 			buildPhases = (
+				7259FFCF1EB49274BF7FB441 /* Check Pods Manifest.lock */,
 				8937B4021B55505700AD568F /* Sources */,
 				8937B4031B55505700AD568F /* Frameworks */,
 				8937B4041B55505700AD568F /* Resources */,
+				1D87673C681E2B1BFA7B6E30 /* Embed Pods Frameworks */,
+				FC4AFC48025B01D58F8F52D5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +259,11 @@
 				TargetAttributes = {
 					8937B4051B55505700AD568F = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8937B41D1B55505700AD568F = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -210,13 +310,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D87673C681E2B1BFA7B6E30 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7259FFCF1EB49274BF7FB441 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC4AFC48025B01D58F8F52D5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8937B4021B55505700AD568F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8907404B1B594255005CB3FF /* YelpAPI.swift in Sources */,
+				891A6A3A1B57EAAA0046FCE8 /* Restaurant.swift in Sources */,
 				8937B4111B55505700AD568F /* ViewController.swift in Sources */,
 				8937B40C1B55505700AD568F /* AppDelegate.swift in Sources */,
+				898F861A1B5D2C44004EB3E7 /* Location.swift in Sources */,
 				8937B40F1B55505700AD568F /* Terserah.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,11 +447,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Terserah/Terserah-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -337,26 +491,56 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Terserah/Terserah-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		8937B4291B55505700AD568F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5234D27C52A3C567B07947 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Terserah",
+				);
 				INFOPLIST_FILE = Terserah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-AFNetworking\"",
+					"-l\"Pods-BDBOAuth1Manager\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		8937B42A1B55505700AD568F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Terserah",
+				);
 				INFOPLIST_FILE = Terserah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,7 +590,7 @@
 				8937B4271B55505700AD568F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		8937B4281B55505700AD568F /* Build configuration list for PBXNativeTarget "Terserah" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +599,7 @@
 				8937B42A1B55505700AD568F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		8937B42B1B55505700AD568F /* Build configuration list for PBXNativeTarget "TerserahTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +608,7 @@
 				8937B42D1B55505700AD568F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
