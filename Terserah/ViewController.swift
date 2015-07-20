@@ -23,6 +23,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
     // Variable for get the Restaurant List
      var businesses: [Restaurant]!
     
+    // variable longlat
+    var longlat: [String]!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,15 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
        
-        Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, category: ["asianfusion", "burgers"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
-            self.businesses = Restaurant
-            
-            for business in Restaurant {
-                println(business.businessName!)
-                println(business.businessAddress!)
-                println()
-            }
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,10 +79,33 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         hereMe.title = "I'm here!"
         mapView.addAnnotation(hereMe)
         
+        getData("\(placemarks.location.coordinate.latitude)",location_long : "\(placemarks.location.coordinate.longitude)")
         // cobaYelp()
         
+        
+        
     }
-    
+
+    func getData(location_lat: String!, location_long: String!) {
+        
+        var concatLocation = "" + location_lat + "," + location_long
+        
+        Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, location: concatLocation, category: ["asianfusion", "burgers"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
+            self.businesses = Restaurant
+            
+            for business in Restaurant {
+                println(business.businessName!)
+                println(business.businessAddress!)
+                println()
+                
+                let RestaurantPosition = MKPointAnnotation()
+                RestaurantPosition.coordinate = CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude)
+                RestaurantPosition.title = business.businessName
+                self.mapView.addAnnotation(RestaurantPosition)
+            }
+        }
+        
+    }
     // Function to show the error if it failed.
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error nih :( " + error.localizedDescription)
@@ -100,6 +117,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
             regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    //show user location
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        mapView.showsUserLocation = (status == .AuthorizedAlways)
+    }
+    
     
 }
 

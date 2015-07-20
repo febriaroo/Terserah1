@@ -13,6 +13,8 @@ class Restaurant: NSObject {
     var businessId : String!
     var businessName : String!
     var businessImage : String!
+    var businessCoordinateLongitude : Double!
+    var businessCoordinateLatitude : Double!
     var businessUrl : NSURL!
     var businessPhone : String!
     var businessAddress : String!
@@ -40,6 +42,14 @@ class Restaurant: NSObject {
             }
             self.businessAddress = address
         }
+        println()
+        println(location)
+        let coordinate = location!["coordinate"] as? NSDictionary
+        if coordinate != nil {
+            businessCoordinateLatitude  = coordinate!["latitude"] as? Double
+            businessCoordinateLongitude = coordinate!["longitude"] as? Double
+        }
+        println("Koodinate : \(businessCoordinateLatitude),\(businessCoordinateLongitude)")
         
     }
     
@@ -57,7 +67,7 @@ class Restaurant: NSObject {
         YelpAPI.sharedInstance.getDataFromYelp(term, completion: completion)
     }
     
-    class func getRealDataFromYelp(term: String, sort: YelpSortMode?, category: [String]!,completion: ([Restaurant]!, NSError!) -> Void) {
-        YelpAPI.sharedInstance.getDataFromYelp(term, sort: sort, category: category, completion: completion)
+    class func getRealDataFromYelp(term: String, sort: YelpSortMode?, location: String!, category: [String]!,completion: ([Restaurant]!, NSError!) -> Void) {
+        YelpAPI.sharedInstance.getDataFromYelp(term, sort: sort, location: location, category: category, completion: completion)
     }
 }

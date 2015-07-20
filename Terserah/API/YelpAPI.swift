@@ -66,13 +66,19 @@ class YelpAPI: BDBOAuth1RequestOperationManager{
     func getDataFromYelp(term: String, completion: ([Restaurant]!, NSError!) -> Void) -> AFHTTPRequestOperation {
         // this function will return a request for HTTP using AFHTTPRequestOperation
         
-        return getDataFromYelp(term, sort: nil, category: nil, completion: completion)
+        return getDataFromYelp(term, sort: nil, location: nil, category: nil, completion: completion)
     }
 
-    func getDataFromYelp(term: String, sort: YelpSortMode?, category: [String]!,completion: ([Restaurant]!, NSError!) -> Void) -> AFHTTPRequestOperation {
+    func getDataFromYelp(term: String, sort: YelpSortMode?,location: String!, category: [String]!,completion: ([Restaurant]!, NSError!) -> Void) -> AFHTTPRequestOperation {
     
+        var parameters: [String : AnyObject]
         // Default the location to San Francisco
-        var parameters: [String : AnyObject] = ["term": term, "ll": "37.785771,-122.406165"]
+        if location != nil {
+            parameters = ["term": term, "ll": location, "radius": "5000"]
+        } else {
+            parameters = ["term": term, "ll": "40.7460424,-74.0068579", "radius": "5000"]
+            
+        }
         
         if sort != nil {
             parameters["sort"] = sort!.rawValue
