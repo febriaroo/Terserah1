@@ -22,7 +22,7 @@ class CustomAnnotationView: MKAnnotationView {
         frame.size = CGSizeMake(60, 60)
         self.frame = frame
         self.backgroundColor = UIColor.clearColor()
-        self.centerOffset = CGPointMake(-5,-5);
+        self.centerOffset = CGPointMake(-5,-5)
         
     }
     
@@ -32,7 +32,8 @@ class CustomAnnotationView: MKAnnotationView {
     
     override func drawRect(rect: CGRect) {
         //drawing code
-        UIImage(named: "bread.png")?.drawInRect(CGRectMake( 30, 30, 30, 30))
+        UIImage(named: "bread.png")?.drawInRect(CGRectMake( 0, 0, 30, 30))
+        
     }
 
     /*

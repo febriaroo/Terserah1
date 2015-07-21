@@ -35,7 +35,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
+        self.mapView.showsUserLocation = true
         self.mapView.delegate = self
+        self.mapView.userLocation.title = "I'm Here!"
 
     }
 
@@ -43,6 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     // function to get the Update Location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -74,17 +77,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         // Show in Maps
          centerMapOnLocation(placemarks.location)
-        
-        // Add the pin into user location
-        let hereMe = MKPointAnnotation()
-        hereMe.coordinate = placemarks.location.coordinate
-        hereMe.title = "I'm here!"
-        mapView.addAnnotation(hereMe)
-        
-        getData("\(placemarks.location.coordinate.latitude)",location_long : "\(placemarks.location.coordinate.longitude)")
-
     }
 
+    // get Restaurant data after get User Location!
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        self.getData("\(userLocation.location.coordinate.latitude)",location_long : "\(userLocation.location.coordinate.longitude)")
+    }
+    
     func getData(location_lat: String!, location_long: String!) {
         
         var concatLocation = "" + location_lat + "," + location_long
@@ -126,10 +125,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    //show user location
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        mapView.showsUserLocation = (status == .AuthorizedAlways)
-    }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         
@@ -141,6 +136,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         if customAnnotationView == nil {
             customAnnotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: "CustomAnnotationView")
+            customAnnotationView!.canShowCallout = true
+            
         } else {
             customAnnotationView?.annotation = annotation
         }

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "terserah_icon.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "terserah_icon_2x.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "terserah_icon_3x.pdf"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
