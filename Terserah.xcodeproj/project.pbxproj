@@ -18,7 +18,10 @@
 		8937B4191B55505700AD568F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8937B4171B55505700AD568F /* LaunchScreen.xib */; };
 		8937B4251B55505700AD568F /* TerserahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4241B55505700AD568F /* TerserahTests.swift */; };
 		8937B4321B55575900AD568F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8937B4311B55575900AD568F /* MapKit.framework */; };
-		898F861A1B5D2C44004EB3E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F86191B5D2C44004EB3E7 /* Location.swift */; };
+		898F861C1B5D66E8004EB3E7 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F861B1B5D66E8004EB3E7 /* CustomAnnotationView.swift */; };
+		898F861E1B5D70EB004EB3E7 /* customAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F861D1B5D70EB004EB3E7 /* customAnnotation.swift */; };
+		898F86201B5D76E2004EB3E7 /* bread.png in Resources */ = {isa = PBXBuildFile; fileRef = 898F861F1B5D76E2004EB3E7 /* bread.png */; };
+		898F86221B5D79C1004EB3E7 /* customPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F86211B5D79C1004EB3E7 /* customPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,7 @@
 		8937B40A1B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8937B40B1B55505700AD568F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8937B40E1B55505700AD568F /* Terserah.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Terserah.xcdatamodel; sourceTree = "<group>"; };
-		8937B4101B55505700AD568F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8937B4101B55505700AD568F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		8937B4131B55505700AD568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8937B4151B55505700AD568F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8937B4181B55505700AD568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -51,7 +54,10 @@
 		8937B4241B55505700AD568F /* TerserahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerserahTests.swift; sourceTree = "<group>"; };
 		8937B4311B55575900AD568F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		89420E311B56F90700579D89 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/Pods-Terserah/AFNetworking.framework"; sourceTree = "<group>"; };
-		898F86191B5D2C44004EB3E7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		898F861B1B5D66E8004EB3E7 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		898F861D1B5D70EB004EB3E7 /* customAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customAnnotation.swift; sourceTree = "<group>"; };
+		898F861F1B5D76E2004EB3E7 /* bread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bread.png; path = Images.xcassets/MarkerIcon/bread.imageset/bread.png; sourceTree = "<group>"; };
+		898F86211B5D79C1004EB3E7 /* customPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customPointAnnotation.swift; path = Terserah/Class/customPointAnnotation.swift; sourceTree = "<group>"; };
 		A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				891A6A361B57EAAA0046FCE8 /* Restaurant.swift */,
-				898F86191B5D2C44004EB3E7 /* Location.swift */,
+				898F861D1B5D70EB004EB3E7 /* customAnnotation.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -104,6 +110,8 @@
 		891A6A371B57EAAA0046FCE8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8937B4101B55505700AD568F /* ViewController.swift */,
+				898F861B1B5D66E8004EB3E7 /* CustomAnnotationView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 		8937B3FD1B55505700AD568F = {
 			isa = PBXGroup;
 			children = (
+				898F86211B5D79C1004EB3E7 /* customPointAnnotation.swift */,
 				8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */,
 				8937B4311B55575900AD568F /* MapKit.framework */,
 				8937B4081B55505700AD568F /* Terserah */,
@@ -154,7 +163,6 @@
 				891A6A381B57EAAA0046FCE8 /* Model */,
 				891A6A391B57EAAA0046FCE8 /* View */,
 				8937B40B1B55505700AD568F /* AppDelegate.swift */,
-				8937B4101B55505700AD568F /* ViewController.swift */,
 				8937B4121B55505700AD568F /* Main.storyboard */,
 				8937B4151B55505700AD568F /* Images.xcassets */,
 				8937B4171B55505700AD568F /* LaunchScreen.xib */,
@@ -167,6 +175,7 @@
 		8937B4091B55505700AD568F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				898F861F1B5D76E2004EB3E7 /* bread.png */,
 				8937B40A1B55505700AD568F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -297,6 +306,7 @@
 			files = (
 				8937B4141B55505700AD568F /* Main.storyboard in Resources */,
 				8937B4191B55505700AD568F /* LaunchScreen.xib in Resources */,
+				898F86201B5D76E2004EB3E7 /* bread.png in Resources */,
 				8937B4161B55505700AD568F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +377,9 @@
 				891A6A3A1B57EAAA0046FCE8 /* Restaurant.swift in Sources */,
 				8937B4111B55505700AD568F /* ViewController.swift in Sources */,
 				8937B40C1B55505700AD568F /* AppDelegate.swift in Sources */,
-				898F861A1B5D2C44004EB3E7 /* Location.swift in Sources */,
+				898F861C1B5D66E8004EB3E7 /* CustomAnnotationView.swift in Sources */,
+				898F861E1B5D70EB004EB3E7 /* customAnnotation.swift in Sources */,
+				898F86221B5D79C1004EB3E7 /* customPointAnnotation.swift in Sources */,
 				8937B40F1B55505700AD568F /* Terserah.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

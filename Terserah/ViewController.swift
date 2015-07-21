@@ -11,8 +11,10 @@ import UIKit
 import CoreLocation // For Get the user location
 import MapKit // For Showing Maps
 import OAuthSwift // For Oauth Request
+import Darwin // For random number
+import Foundation
 
-class ViewController: UIViewController, CLLocationManagerDelegate  {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
 
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
@@ -33,8 +35,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-       
-        
+        self.mapView.delegate = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
             if placemarks.count > 0 {
                 let pm = placemarks[0] as! CLPlacemark
                 self.displayLocationInfo(pm)
+                self.locationManager.stopUpdatingLocation()
             } else {
                 println("Error with data")
             }
@@ -64,14 +67,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
     {
         self.locationManager.stopUpdatingLocation()
         
-        println(placemarks.locality)
-        println(placemarks.postalCode)
-        println(placemarks.administrativeArea)
-        println(placemarks.country)
+        // println(placemarks.locality)
+        // println(placemarks.postalCode)
+        // println(placemarks.administrativeArea)
+        // println(placemarks.country)
         
         // Show in Maps
-        println("Latitude \(placemarks.location.coordinate.latitude)")
-        centerMapOnLocation(placemarks.location)
+         centerMapOnLocation(placemarks.location)
         
         // Add the pin into user location
         let hereMe = MKPointAnnotation()
@@ -80,10 +82,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         mapView.addAnnotation(hereMe)
         
         getData("\(placemarks.location.coordinate.latitude)",location_long : "\(placemarks.location.coordinate.longitude)")
-        // cobaYelp()
-        
-        
-        
+
     }
 
     func getData(location_lat: String!, location_long: String!) {
@@ -93,19 +92,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, location: concatLocation, category: ["asianfusion", "burgers"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
             self.businesses = Restaurant
             
+            var businessCount: Int = Restaurant.count
+            let yourBusinessId = Int(arc4random_uniform(UInt32(businessCount)))
+            println(yourBusinessId)
+            var i:Int = 0
+            
             for business in Restaurant {
-                println(business.businessName!)
-                println(business.businessAddress!)
-                println()
+                //println(business.businessName!)
+                //println(business.businessAddress!)
+                //println()
+                if i == yourBusinessId {
+                    //show in map
+                    let restaurantPosition = customAnnotation(coordinate: CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude), title: business.businessName, subtitle: business.businessAddress)
+                    self.mapView.viewForAnnotation(restaurantPosition)
+                    self.mapView.addAnnotation(restaurantPosition)
+                    break
+                }
+                i++
                 
-                let RestaurantPosition = MKPointAnnotation()
-                RestaurantPosition.coordinate = CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude)
-                RestaurantPosition.title = business.businessName
-                self.mapView.addAnnotation(RestaurantPosition)
             }
         }
-        
     }
+    
     // Function to show the error if it failed.
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error nih :( " + error.localizedDescription)
@@ -123,6 +131,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         mapView.showsUserLocation = (status == .AuthorizedAlways)
     }
     
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        
+        if annotation.isKindOfClass(MKUserLocation){
+            return nil
+        }
+        
+        var customAnnotationView = self.mapView?.dequeueReusableAnnotationViewWithIdentifier("CustomAnnotationView")
+        
+        if customAnnotationView == nil {
+            customAnnotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: "CustomAnnotationView")
+        } else {
+            customAnnotationView?.annotation = annotation
+        }
+        
+        return customAnnotationView
+    }
+    
+    func randomLocationForUser() {
+        var businessCount: Int = businesses.count
+        let yourBusinessId = Int(arc4random_uniform(UInt32(businessCount)))
+        println(yourBusinessId)
+    }
     
 }
 

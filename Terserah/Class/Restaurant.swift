@@ -42,14 +42,14 @@ class Restaurant: NSObject {
             }
             self.businessAddress = address
         }
-        println()
-        println(location)
+        //println()
+        //println(dictionary)
         let coordinate = location!["coordinate"] as? NSDictionary
         if coordinate != nil {
             businessCoordinateLatitude  = coordinate!["latitude"] as? Double
             businessCoordinateLongitude = coordinate!["longitude"] as? Double
         }
-        println("Koodinate : \(businessCoordinateLatitude),\(businessCoordinateLongitude)")
+        //println("Koodinate : \(businessCoordinateLatitude),\(businessCoordinateLongitude)")
         
     }
     
