@@ -76,7 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         // println(placemarks.country)
         
         // Show in Maps
-         centerMapOnLocation(placemarks.location)
+        
     }
 
     // get Restaurant data after get User Location!
@@ -105,6 +105,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     let restaurantPosition = customAnnotation(coordinate: CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude), title: business.businessName, subtitle: business.businessAddress)
                     self.mapView.viewForAnnotation(restaurantPosition)
                     self.mapView.addAnnotation(restaurantPosition)
+                    var coordinateBusiness = CLLocation(latitude: business.businessCoordinateLatitude, longitude: business.businessCoordinateLongitude)
+                    self.centerMapOnLocation(coordinateBusiness)
                     break
                 }
                 i++
@@ -151,5 +153,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         println(yourBusinessId)
     }
     
+    // Detect the motion x
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        if motion == .MotionShake {
+            let annotationsToRemove = mapView.annotations.filter { $0 !== self.mapView.userLocation }
+            mapView.removeAnnotations( annotationsToRemove )
+            
+            self.getData("\(mapView.userLocation.location.coordinate.latitude)",location_long : "\(mapView.userLocation.location.coordinate.longitude)")
+        
+        }
+    }
 }
 
