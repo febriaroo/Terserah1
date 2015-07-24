@@ -23,13 +23,19 @@ PODS:
   - BDBOAuth1Manager (1.5.0):
     - AFNetworking/NSURLConnection (~> 2.5.0)
     - AFNetworking/NSURLSession (~> 2.5.0)
+  - KKFloatingActionButton (0.0.7):
+    - MaterialKit
+  - MaterialKit (0.3.5)
 
 DEPENDENCIES:
   - AFNetworking
   - BDBOAuth1Manager
+  - KKFloatingActionButton
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   BDBOAuth1Manager: 2e28773b58f880fb36b5cd3efcf0b1fefbc78a99
+  KKFloatingActionButton: 8fdcda2fb76029d3828bced8b880ef756d9fffae
+  MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
 
 COCOAPODS: 0.37.2

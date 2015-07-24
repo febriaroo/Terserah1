@@ -1,0 +1,1 @@
+PODS_KKFLOATINGACTIONBUTTON_OTHER_LDFLAGS = -framework "QuartzCore" -framework "UIKit"

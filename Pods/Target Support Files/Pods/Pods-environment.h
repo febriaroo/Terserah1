@@ -54,3 +54,15 @@
 #define COCOAPODS_VERSION_MINOR_BDBOAuth1Manager 5
 #define COCOAPODS_VERSION_PATCH_BDBOAuth1Manager 0
 
+// KKFloatingActionButton
+#define COCOAPODS_POD_AVAILABLE_KKFloatingActionButton
+#define COCOAPODS_VERSION_MAJOR_KKFloatingActionButton 0
+#define COCOAPODS_VERSION_MINOR_KKFloatingActionButton 0
+#define COCOAPODS_VERSION_PATCH_KKFloatingActionButton 7
+
+// MaterialKit
+#define COCOAPODS_POD_AVAILABLE_MaterialKit
+#define COCOAPODS_VERSION_MAJOR_MaterialKit 0
+#define COCOAPODS_VERSION_MINOR_MaterialKit 3
+#define COCOAPODS_VERSION_PATCH_MaterialKit 5
+

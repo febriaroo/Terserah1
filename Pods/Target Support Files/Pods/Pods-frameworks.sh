@@ -50,8 +50,12 @@ code_sign() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'AFNetworking.framework'
   install_framework 'BDBOAuth1Manager.framework'
+  install_framework 'KKFloatingActionButton.framework'
+  install_framework 'MaterialKit.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'AFNetworking.framework'
   install_framework 'BDBOAuth1Manager.framework'
+  install_framework 'KKFloatingActionButton.framework'
+  install_framework 'MaterialKit.framework'
 fi

@@ -7,15 +7,25 @@
 //
 //  need to update the Info.plist so the pop up show up (Add NSLocationWhenInUseUsageDescription )
 
+import Foundation
 import UIKit
 import CoreLocation // For Get the user location
 import MapKit // For Showing Maps
 import OAuthSwift // For Oauth Request
 import Darwin // For random number
-import Foundation
+import KKFloatingActionButton // For floating button
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
 
+
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate { //KKFloatingMaterialButtonDataSource, KKFloatingMaterialButtonDelegate  {
+
+    // Navigation Bar Items
+    @IBOutlet weak var navBar: UINavigationBar!
+    
+    @IBOutlet weak var appLogo: UINavigationItem!
+    
+    @IBOutlet weak var menuButton: KKFloatingMaterialButton!
+    // Other Items
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
 
@@ -24,6 +34,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     // Variable for get the Restaurant List
      var businesses: [Restaurant]!
+    
+    // PM
+    var pm: CLPlacemark!
     
     // variable longlat
     var longlat: [String]!
@@ -38,6 +51,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         self.mapView.showsUserLocation = true
         self.mapView.delegate = self
         self.mapView.userLocation.title = "I'm Here!"
+        
+        //menuButton.configureViews()
+//        menuButton.dataSource = self
+//        menuButton.delegate = self
 
     }
 
@@ -47,7 +64,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     
-    // function to get the Update Location
+    //MARK: function to get the Update Location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
             if error != nil {
@@ -56,8 +73,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }
             
             if placemarks.count > 0 {
-                let pm = placemarks[0] as! CLPlacemark
-                self.displayLocationInfo(pm)
+                self.pm = placemarks[0] as! CLPlacemark
+                self.displayLocationInfo(self.pm)
                 self.locationManager.stopUpdatingLocation()
             } else {
                 println("Error with data")
@@ -65,7 +82,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         })
     }
     
-    // Function to show the location data
+    //MARK: Function to show the location data
     func displayLocationInfo(placemarks: CLPlacemark)
     {
         self.locationManager.stopUpdatingLocation()
@@ -79,10 +96,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
     }
 
-    // get Restaurant data after get User Location!
+    //Mark: get Restaurant data after get User Location!
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         self.getData("\(userLocation.location.coordinate.latitude)",location_long : "\(userLocation.location.coordinate.longitude)")
     }
+    
+    // MARK: GetRestaurantDataFromYelp
     
     func getData(location_lat: String!, location_long: String!) {
         
@@ -101,12 +120,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 //println(business.businessAddress!)
                 //println()
                 if i == yourBusinessId {
+                    
                     //show in map
                     let restaurantPosition = customAnnotation(coordinate: CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude), title: business.businessName, subtitle: business.businessAddress)
                     self.mapView.viewForAnnotation(restaurantPosition)
                     self.mapView.addAnnotation(restaurantPosition)
                     var coordinateBusiness = CLLocation(latitude: business.businessCoordinateLatitude, longitude: business.businessCoordinateLongitude)
                     self.centerMapOnLocation(coordinateBusiness)
+                    
+                    // set the direction
+                    let myPlacemark = MKPlacemark(placemark: self.pm!)!
+                    let myDestination = MKPlacemark(coordinate: CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude), addressDictionary: nil)
+                    let destMKMap = MKMapItem(placemark: myDestination)!
+                    
+                    var directionRequest:MKDirectionsRequest = MKDirectionsRequest()
+                    directionRequest.setSource(MKMapItem.mapItemForCurrentLocation())
+                    
+                    directionRequest.setDestination(destMKMap)
+                    
+                    let dir = MKDirections(request: directionRequest)
+                    dir.calculateDirectionsWithCompletionHandler() {
+                        (response:MKDirectionsResponse!, error:NSError!) in
+                        if response == nil {
+                            println(error)
+                            return
+                        }
+                        println("got directions")
+                        let route = response.routes[0] as! MKRoute // I'm feeling insanely lucky
+                        let poly = route.polyline
+                        self.mapView.addOverlay(poly)
+                        for step in route.steps {
+                            println("After \(step.distance) metres: \(step.instructions)")
+                        }
+                    }
                     break
                 }
                 i++
@@ -147,6 +193,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return customAnnotationView
     }
     
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        var v : MKPolylineRenderer! = nil
+        if let overlay = overlay as? MKPolyline {
+            v = MKPolylineRenderer(polyline:overlay)
+            v.strokeColor = UIColor.blueColor().colorWithAlphaComponent(0.8)
+            v.lineWidth = 2
+        }
+        return v
+    }
+    
     func randomLocationForUser() {
         var businessCount: Int = businesses.count
         let yourBusinessId = Int(arc4random_uniform(UInt32(businessCount)))
@@ -156,6 +212,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     // Detect the motion x
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
         if motion == .MotionShake {
+            //get the index of annotation and remove it!
             let annotationsToRemove = mapView.annotations.filter { $0 !== self.mapView.userLocation }
             mapView.removeAnnotations( annotationsToRemove )
             
