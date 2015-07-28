@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		69C98E94442EE162DCBC012A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535F74881E309AD9B181B24 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8907404B1B594255005CB3FF /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907404A1B594255005CB3FF /* YelpAPI.swift */; };
-		891A6A3A1B57EAAA0046FCE8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A6A361B57EAAA0046FCE8 /* Restaurant.swift */; };
-		8937B40C1B55505700AD568F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B40B1B55505700AD568F /* AppDelegate.swift */; };
-		8937B40F1B55505700AD568F /* Terserah.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8937B40D1B55505700AD568F /* Terserah.xcdatamodeld */; };
-		8937B4111B55505700AD568F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4101B55505700AD568F /* ViewController.swift */; };
-		8937B4141B55505700AD568F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8937B4121B55505700AD568F /* Main.storyboard */; };
-		8937B4161B55505700AD568F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8937B4151B55505700AD568F /* Images.xcassets */; };
-		8937B4191B55505700AD568F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8937B4171B55505700AD568F /* LaunchScreen.xib */; };
 		8937B4251B55505700AD568F /* TerserahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4241B55505700AD568F /* TerserahTests.swift */; };
 		8937B4321B55575900AD568F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8937B4311B55575900AD568F /* MapKit.framework */; };
-		898F861C1B5D66E8004EB3E7 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F861B1B5D66E8004EB3E7 /* CustomAnnotationView.swift */; };
-		898F861E1B5D70EB004EB3E7 /* customAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F861D1B5D70EB004EB3E7 /* customAnnotation.swift */; };
-		898F86201B5D76E2004EB3E7 /* bread.png in Resources */ = {isa = PBXBuildFile; fileRef = 898F861F1B5D76E2004EB3E7 /* bread.png */; };
-		898F86221B5D79C1004EB3E7 /* customPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F86211B5D79C1004EB3E7 /* customPointAnnotation.swift */; };
-		89DD29A21B612BD9001490CC /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DD29A11B612BD9001490CC /* appIcon.png */; };
-		89DD29A71B615CF8001490CC /* navigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD29A61B615CF8001490CC /* navigationBarViewController.swift */; };
-		89DD29A91B6161CD001490CC /* TransitOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD29A81B6161CD001490CC /* TransitOperator.swift */; };
-		89DD29AB1B61627C001490CC /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD29AA1B61627C001490CC /* NavigationCell.swift */; };
+		894D37511B667B1900A597AD /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37331B667B1900A597AD /* YelpAPI.swift */; };
+		894D37521B667B1900A597AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37341B667B1900A597AD /* AppDelegate.swift */; };
+		894D37551B667B1900A597AD /* customAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373A1B667B1900A597AD /* customAnnotation.swift */; };
+		894D37561B667B1900A597AD /* customPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373B1B667B1900A597AD /* customPointAnnotation.swift */; };
+		894D37571B667B1900A597AD /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373C1B667B1900A597AD /* NavigationCell.swift */; };
+		894D37581B667B1900A597AD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373D1B667B1900A597AD /* Restaurant.swift */; };
+		894D37591B667B1900A597AD /* YelpApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373E1B667B1900A597AD /* YelpApi.swift */; };
+		894D375A1B667B1900A597AD /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37401B667B1900A597AD /* CustomAnnotationView.swift */; };
+		894D375C1B667B1900A597AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894D37421B667B1900A597AD /* Images.xcassets */; };
+		894D375D1B667B1900A597AD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 894D37431B667B1900A597AD /* Info.plist */; };
+		894D375E1B667B1900A597AD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 894D37461B667B1900A597AD /* Podfile */; };
+		894D375F1B667B1900A597AD /* Terserah.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894D374C1B667B1900A597AD /* Terserah.xcdatamodeld */; };
+		894D37601B667B1900A597AD /* TransitOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D374E1B667B1900A597AD /* TransitOperator.swift */; };
+		894D37611B667B1900A597AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37501B667B1900A597AD /* ViewController.swift */; };
+		8979E07C1B681492003957C1 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979E07B1B681492003957C1 /* MenuBarViewController.swift */; };
+		897C4AB81B6688BD00A193EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894D37371B667B1900A597AD /* Main.storyboard */; };
+		897C4AB91B6688C200A193EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894D37351B667B1900A597AD /* LaunchScreen.xib */; };
+		897C4ABD1B66A5CD00A193EE /* ListDirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,31 +44,32 @@
 		4C5234D27C52A3C567B07947 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7535F74881E309AD9B181B24 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwift_Bridging_Header.h; sourceTree = "<group>"; };
-		8907404A1B594255005CB3FF /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
-		891A6A361B57EAAA0046FCE8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		891A6A3F1B58004D0046FCE8 /* Terserah-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Terserah-Bridging-Header.h"; sourceTree = "<group>"; };
 		8937B4061B55505700AD568F /* Terserah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terserah.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8937B40A1B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8937B40B1B55505700AD568F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8937B40E1B55505700AD568F /* Terserah.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Terserah.xcdatamodel; sourceTree = "<group>"; };
-		8937B4101B55505700AD568F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
-		8937B4131B55505700AD568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8937B4151B55505700AD568F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8937B4181B55505700AD568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8937B41E1B55505700AD568F /* TerserahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerserahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937B4231B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8937B4241B55505700AD568F /* TerserahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerserahTests.swift; sourceTree = "<group>"; };
 		8937B4311B55575900AD568F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		89420E311B56F90700579D89 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/Pods-Terserah/AFNetworking.framework"; sourceTree = "<group>"; };
-		898F861B1B5D66E8004EB3E7 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAnnotationView.swift; path = ../Controller/CustomAnnotationView.swift; sourceTree = "<group>"; };
-		898F861D1B5D70EB004EB3E7 /* customAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customAnnotation.swift; sourceTree = "<group>"; };
-		898F861F1B5D76E2004EB3E7 /* bread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bread.png; path = Images.xcassets/MarkerIcon/bread.imageset/bread.png; sourceTree = "<group>"; };
-		898F86211B5D79C1004EB3E7 /* customPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customPointAnnotation.swift; path = Terserah/Class/customPointAnnotation.swift; sourceTree = "<group>"; };
-		89DD29A11B612BD9001490CC /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appIcon.png; path = ../../../Desktop/appIcon.png; sourceTree = "<group>"; };
-		89DD29A51B612FB2001490CC /* KGBlankSpaceSketch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KGBlankSpaceSketch.ttf; path = ../../../Downloads/KGBlankSpace/KGBlankSpaceSketch.ttf; sourceTree = "<group>"; };
-		89DD29A61B615CF8001490CC /* navigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navigationBarViewController.swift; sourceTree = "<group>"; };
-		89DD29A81B6161CD001490CC /* TransitOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitOperator.swift; sourceTree = "<group>"; };
-		89DD29AA1B61627C001490CC /* NavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
+		894D37331B667B1900A597AD /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
+		894D37341B667B1900A597AD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		894D37361B667B1900A597AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		894D37381B667B1900A597AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		894D373A1B667B1900A597AD /* customAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customAnnotation.swift; sourceTree = "<group>"; };
+		894D373B1B667B1900A597AD /* customPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customPointAnnotation.swift; sourceTree = "<group>"; };
+		894D373C1B667B1900A597AD /* NavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
+		894D373D1B667B1900A597AD /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		894D373E1B667B1900A597AD /* YelpApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpApi.swift; sourceTree = "<group>"; };
+		894D37401B667B1900A597AD /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAnnotationView.swift; path = ../Controller/CustomAnnotationView.swift; sourceTree = "<group>"; };
+		894D37421B667B1900A597AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		894D37431B667B1900A597AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		894D37451B667B1900A597AD /* OAuthSwift_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwift_Bridging_Header.h; sourceTree = "<group>"; };
+		894D37461B667B1900A597AD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		894D374B1B667B1900A597AD /* Terserah-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Terserah-Bridging-Header.h"; sourceTree = "<group>"; };
+		894D374D1B667B1900A597AD /* Terserah.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Terserah.xcdatamodel; sourceTree = "<group>"; };
+		894D374E1B667B1900A597AD /* TransitOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitOperator.swift; sourceTree = "<group>"; };
+		894D37501B667B1900A597AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		8979E07B1B681492003957C1 /* MenuBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
+		897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDirectionViewController.swift; sourceTree = "<group>"; };
 		A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,55 +102,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		890740491B594237005CB3FF /* API */ = {
-			isa = PBXGroup;
-			children = (
-				8907404A1B594255005CB3FF /* YelpAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		891A6A351B57EAAA0046FCE8 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				891A6A361B57EAAA0046FCE8 /* Restaurant.swift */,
-				898F861D1B5D70EB004EB3E7 /* customAnnotation.swift */,
-				89DD29AA1B61627C001490CC /* NavigationCell.swift */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		891A6A371B57EAAA0046FCE8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8937B4101B55505700AD568F /* ViewController.swift */,
-				89DD29A61B615CF8001490CC /* navigationBarViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		891A6A381B57EAAA0046FCE8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		891A6A391B57EAAA0046FCE8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				898F861B1B5D66E8004EB3E7 /* CustomAnnotationView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		8937B3FD1B55505700AD568F = {
 			isa = PBXGroup;
 			children = (
-				898F86211B5D79C1004EB3E7 /* customPointAnnotation.swift */,
+				894D37311B667B1900A597AD /* Terserah */,
 				8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */,
 				8937B4311B55575900AD568F /* MapKit.framework */,
-				8937B4081B55505700AD568F /* Terserah */,
 				8937B4211B55505700AD568F /* TerserahTests */,
 				8937B4071B55505700AD568F /* Products */,
 				B8D9B43CAD5B9ADC71BF43F2 /* Frameworks */,
@@ -162,37 +122,6 @@
 				8937B41E1B55505700AD568F /* TerserahTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8937B4081B55505700AD568F /* Terserah */ = {
-			isa = PBXGroup;
-			children = (
-				890740491B594237005CB3FF /* API */,
-				891A6A3F1B58004D0046FCE8 /* Terserah-Bridging-Header.h */,
-				891A6A351B57EAAA0046FCE8 /* Class */,
-				891A6A371B57EAAA0046FCE8 /* Controller */,
-				891A6A381B57EAAA0046FCE8 /* Model */,
-				891A6A391B57EAAA0046FCE8 /* View */,
-				8937B40B1B55505700AD568F /* AppDelegate.swift */,
-				8937B4121B55505700AD568F /* Main.storyboard */,
-				8937B4151B55505700AD568F /* Images.xcassets */,
-				8937B4171B55505700AD568F /* LaunchScreen.xib */,
-				8937B40D1B55505700AD568F /* Terserah.xcdatamodeld */,
-				8937B4091B55505700AD568F /* Supporting Files */,
-				89DD29A81B6161CD001490CC /* TransitOperator.swift */,
-			);
-			path = Terserah;
-			sourceTree = "<group>";
-		};
-		8937B4091B55505700AD568F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				89DD29A51B612FB2001490CC /* KGBlankSpaceSketch.ttf */,
-				89DD29A11B612BD9001490CC /* appIcon.png */,
-				898F861F1B5D76E2004EB3E7 /* bread.png */,
-				8937B40A1B55505700AD568F /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8937B4211B55505700AD568F /* TerserahTests */ = {
@@ -210,6 +139,105 @@
 				8937B4231B55505700AD568F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		894D37311B667B1900A597AD /* Terserah */ = {
+			isa = PBXGroup;
+			children = (
+				894D37321B667B1900A597AD /* API */,
+				894D37341B667B1900A597AD /* AppDelegate.swift */,
+				894D37351B667B1900A597AD /* LaunchScreen.xib */,
+				894D37371B667B1900A597AD /* Main.storyboard */,
+				894D37391B667B1900A597AD /* Class */,
+				894D373F1B667B1900A597AD /* Controller */,
+				894D37421B667B1900A597AD /* Images.xcassets */,
+				894D37431B667B1900A597AD /* Info.plist */,
+				894D37441B667B1900A597AD /* Model */,
+				894D37451B667B1900A597AD /* OAuthSwift_Bridging_Header.h */,
+				894D37461B667B1900A597AD /* Podfile */,
+				894D37471B667B1900A597AD /* Pods */,
+				894D374B1B667B1900A597AD /* Terserah-Bridging-Header.h */,
+				894D374C1B667B1900A597AD /* Terserah.xcdatamodeld */,
+				894D374E1B667B1900A597AD /* TransitOperator.swift */,
+				894D374F1B667B1900A597AD /* View */,
+			);
+			path = Terserah;
+			sourceTree = "<group>";
+		};
+		894D37321B667B1900A597AD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				894D37331B667B1900A597AD /* YelpAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		894D37391B667B1900A597AD /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				894D373A1B667B1900A597AD /* customAnnotation.swift */,
+				894D373B1B667B1900A597AD /* customPointAnnotation.swift */,
+				894D373C1B667B1900A597AD /* NavigationCell.swift */,
+				894D373D1B667B1900A597AD /* Restaurant.swift */,
+				894D373E1B667B1900A597AD /* YelpApi.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		894D373F1B667B1900A597AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				894D37501B667B1900A597AD /* ViewController.swift */,
+				897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */,
+				8979E07B1B681492003957C1 /* MenuBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		894D37441B667B1900A597AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		894D37471B667B1900A597AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				894D37481B667B1900A597AD /* Headers */,
+				894D37491B667B1900A597AD /* Local Podspecs */,
+				894D374A1B667B1900A597AD /* Target Support Files */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		894D37481B667B1900A597AD /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		894D37491B667B1900A597AD /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		894D374A1B667B1900A597AD /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Target Support Files";
+			sourceTree = "<group>";
+		};
+		894D374F1B667B1900A597AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				894D37401B667B1900A597AD /* CustomAnnotationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		895AE7791B56F10D00C215E7 /* Target Support Files */ = {
@@ -318,11 +346,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8937B4141B55505700AD568F /* Main.storyboard in Resources */,
-				8937B4191B55505700AD568F /* LaunchScreen.xib in Resources */,
-				898F86201B5D76E2004EB3E7 /* bread.png in Resources */,
-				8937B4161B55505700AD568F /* Images.xcassets in Resources */,
-				89DD29A21B612BD9001490CC /* appIcon.png in Resources */,
+				897C4AB91B6688C200A193EE /* LaunchScreen.xib in Resources */,
+				897C4AB81B6688BD00A193EE /* Main.storyboard in Resources */,
+				894D375E1B667B1900A597AD /* Podfile in Resources */,
+				894D375C1B667B1900A597AD /* Images.xcassets in Resources */,
+				894D375D1B667B1900A597AD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,17 +416,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8907404B1B594255005CB3FF /* YelpAPI.swift in Sources */,
-				89DD29A91B6161CD001490CC /* TransitOperator.swift in Sources */,
-				891A6A3A1B57EAAA0046FCE8 /* Restaurant.swift in Sources */,
-				8937B4111B55505700AD568F /* ViewController.swift in Sources */,
-				8937B40C1B55505700AD568F /* AppDelegate.swift in Sources */,
-				898F861C1B5D66E8004EB3E7 /* CustomAnnotationView.swift in Sources */,
-				898F861E1B5D70EB004EB3E7 /* customAnnotation.swift in Sources */,
-				89DD29A71B615CF8001490CC /* navigationBarViewController.swift in Sources */,
-				89DD29AB1B61627C001490CC /* NavigationCell.swift in Sources */,
-				898F86221B5D79C1004EB3E7 /* customPointAnnotation.swift in Sources */,
-				8937B40F1B55505700AD568F /* Terserah.xcdatamodeld in Sources */,
+				897C4ABD1B66A5CD00A193EE /* ListDirectionViewController.swift in Sources */,
+				894D37611B667B1900A597AD /* ViewController.swift in Sources */,
+				894D375F1B667B1900A597AD /* Terserah.xcdatamodeld in Sources */,
+				894D37521B667B1900A597AD /* AppDelegate.swift in Sources */,
+				894D37571B667B1900A597AD /* NavigationCell.swift in Sources */,
+				894D37601B667B1900A597AD /* TransitOperator.swift in Sources */,
+				894D37551B667B1900A597AD /* customAnnotation.swift in Sources */,
+				894D37561B667B1900A597AD /* customPointAnnotation.swift in Sources */,
+				894D37591B667B1900A597AD /* YelpApi.swift in Sources */,
+				894D37581B667B1900A597AD /* Restaurant.swift in Sources */,
+				894D37511B667B1900A597AD /* YelpAPI.swift in Sources */,
+				8979E07C1B681492003957C1 /* MenuBarViewController.swift in Sources */,
+				894D375A1B667B1900A597AD /* CustomAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,20 +451,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8937B4121B55505700AD568F /* Main.storyboard */ = {
+		894D37351B667B1900A597AD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8937B4131B55505700AD568F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8937B4171B55505700AD568F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8937B4181B55505700AD568F /* Base */,
+				894D37361B667B1900A597AD /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		894D37371B667B1900A597AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				894D37381B667B1900A597AD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -482,7 +512,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Terserah/Terserah-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
@@ -522,6 +552,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Terserah/Terserah-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
@@ -643,12 +674,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8937B40D1B55505700AD568F /* Terserah.xcdatamodeld */ = {
+		894D374C1B667B1900A597AD /* Terserah.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8937B40E1B55505700AD568F /* Terserah.xcdatamodel */,
+				894D374D1B667B1900A597AD /* Terserah.xcdatamodel */,
 			);
-			currentVersion = 8937B40E1B55505700AD568F /* Terserah.xcdatamodel */;
+			currentVersion = 894D374D1B667B1900A597AD /* Terserah.xcdatamodel */;
 			path = Terserah.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

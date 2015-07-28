@@ -13,49 +13,65 @@ import CoreLocation // For Get the user location
 import MapKit // For Showing Maps
 import OAuthSwift // For Oauth Request
 import Darwin // For random number
-import KKFloatingActionButton // For floating button
 
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate { //KKFloatingMaterialButtonDataSource, KKFloatingMaterialButtonDelegate  {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    // Name and address bar (Buttom one)
+    
+
+    @IBOutlet weak var nameLocationButtom: UILabel!
+    @IBOutlet weak var addressLocationButtom: UILabel!
 
     // Navigation Bar Items
     @IBOutlet weak var navBar: UINavigationBar!
     
     @IBOutlet weak var appLogo: UINavigationItem!
     
-    @IBOutlet weak var menuButton: KKFloatingMaterialButton!
     // Other Items
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-
+    
+    var myDestination: MKPlacemark!
+    
     // Variable for the distance of maps
     let regionRadius: CLLocationDistance = 1000
     
     // Variable for get the Restaurant List
-     var businesses: [Restaurant]!
+    var businesses: [Restaurant]!
+    
+    // direction
+    var directionku: [String]!
     
     // PM
     var pm: CLPlacemark!
     
+    // show messagebox to shake it
+    let actionSheetController: UIAlertView = UIAlertView(title: "Shake now!!", message: "Hi! shake it!", delegate: nil, cancelButtonTitle: "Ok!")
+    var countShake = 0
+    
     // variable longlat
     var longlat: [String]!
+    
+    var restaurantName:String!
+    var restaurantLong:Double!
+    var restaurantLat:Double!
+    
+    @IBAction func DirectionClick(sender: AnyObject) {
+        if restaurantName != nil && restaurantLong != nil && restaurantLat != nil  {
+            openMapForPlace(restaurantName, venueLat: restaurantLat, venueLng: restaurantLong)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //get UserLocation
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
-        self.mapView.showsUserLocation = true
-        self.mapView.delegate = self
-        self.mapView.userLocation.title = "I'm Here!"
-        
-        //menuButton.configureViews()
-//        menuButton.dataSource = self
-//        menuButton.delegate = self
 
+        
+        let navBackgroundImage:UIImage! = UIImage(named: "testing")
+        
+        if countShake == 0 {
+            actionSheetController.show()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,7 +116,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         self.getData("\(userLocation.location.coordinate.latitude)",location_long : "\(userLocation.location.coordinate.longitude)")
     }
-    
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        openMapForPlace(restaurantName, venueLat: restaurantLat, venueLng: restaurantLong)
+    }
     // MARK: GetRestaurantDataFromYelp
     
     func getData(location_lat: String!, location_long: String!) {
@@ -127,11 +145,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     self.mapView.addAnnotation(restaurantPosition)
                     var coordinateBusiness = CLLocation(latitude: business.businessCoordinateLatitude, longitude: business.businessCoordinateLongitude)
                     self.centerMapOnLocation(coordinateBusiness)
+                    self.restaurantName = business.businessName
+                    self.restaurantLong = business.businessCoordinateLongitude
+                    self.restaurantLat = business.businessCoordinateLongitude
                     
                     // set the direction
                     let myPlacemark = MKPlacemark(placemark: self.pm!)!
-                    let myDestination = MKPlacemark(coordinate: CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude), addressDictionary: nil)
-                    let destMKMap = MKMapItem(placemark: myDestination)!
+                    self.myDestination = MKPlacemark(coordinate: CLLocationCoordinate2DMake(business.businessCoordinateLatitude, business.businessCoordinateLongitude), addressDictionary: nil)
+                    let destMKMap = MKMapItem(placemark: self.myDestination)!
                     
                     var directionRequest:MKDirectionsRequest = MKDirectionsRequest()
                     directionRequest.setSource(MKMapItem.mapItemForCurrentLocation())
@@ -146,12 +167,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                             return
                         }
                         println("got directions")
-                        let route = response.routes[0] as! MKRoute // I'm feeling insanely lucky
+                        let route = response.routes[0] as! MKRoute
                         let poly = route.polyline
                         self.mapView.addOverlay(poly)
                         for step in route.steps {
                             println("After \(step.distance) metres: \(step.instructions)")
                         }
+                        // update label
+                        self.nameLocationButtom.text = business.businessName
+                        self.addressLocationButtom.text = business.businessAddress
                     }
                     break
                 }
@@ -159,6 +183,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 
             }
         }
+        println()
     }
     
     // Function to show the error if it failed.
@@ -211,14 +236,51 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     // Detect the motion x
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        
         if motion == .MotionShake {
-            //get the index of annotation and remove it!
+            //get UserLocation
+            self.locationManager.delegate = self
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.requestWhenInUseAuthorization()
+            self.mapView.showsUserLocation = true
+            self.mapView.delegate = self
+            self.mapView.userLocation.title = "I'm Here!"
+            self.locationManager.startUpdatingLocation()
+            countShake++
+            // show messagebox to shake it
+            actionSheetController.dismissWithClickedButtonIndex(-1, animated: true)
+            
             let annotationsToRemove = mapView.annotations.filter { $0 !== self.mapView.userLocation }
             mapView.removeAnnotations( annotationsToRemove )
             
             self.getData("\(mapView.userLocation.location.coordinate.latitude)",location_long : "\(mapView.userLocation.location.coordinate.longitude)")
         
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //var DestViewController :ListDirectionViewController = segue.destinationViewController as! ListDirectionViewController
+        
+    }
+    
+    func openMapForPlace(venueName:String!, venueLat: Double!, venueLng:Double! ) {
+        
+
+        var latitute:CLLocationDegrees =  venueLat
+        var longitute:CLLocationDegrees = venueLng
+        
+        let regionDistance:CLLocationDistance = 10000
+        var coordinates = CLLocationCoordinate2DMake(latitute, longitute)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        var options = [
+            MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+        ]
+        var placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        var mapItem = MKMapItem(placemark: myDestination)
+        mapItem.name = "\(venueName)"
+        mapItem.openInMapsWithLaunchOptions(options)
+        
     }
 }
 

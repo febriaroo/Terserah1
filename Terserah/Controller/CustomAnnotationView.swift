@@ -19,7 +19,7 @@ class CustomAnnotationView: MKAnnotationView {
     override init(annotation: MKAnnotation!, reuseIdentifier: String!) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         var frame = self.frame
-        frame.size = CGSizeMake(60, 60)
+        frame.size = CGSizeMake(30, 30)
         self.frame = frame
         self.backgroundColor = UIColor.clearColor()
         self.centerOffset = CGPointMake(-5,-5)
@@ -32,7 +32,7 @@ class CustomAnnotationView: MKAnnotationView {
     
     override func drawRect(rect: CGRect) {
         //drawing code
-        UIImage(named: "bread.png")?.drawInRect(CGRectMake( 0, 0, 30, 30))
+        UIImage(named: "marker.png")?.drawInRect(CGRectMake( 0, 0, 30, 30))
         
     }
 

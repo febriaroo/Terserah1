@@ -47,6 +47,68 @@
             endingLineNumber = "35"
             landmarkName = "drawRect(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Terserah.CustomAnnotationView.drawRect (Terserah.CustomAnnotationView)(C.CGRect) -&gt; ()"
+                  moduleName = "Terserah"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
+                  timestampString = "459806394.496766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Terserah.CustomAnnotationView.drawRect (Terserah.CustomAnnotationView)(C.CGRect) -&gt; ()"
+                  moduleName = "Terserah"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
+                  timestampString = "459806394.497019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "87">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Terserah.CustomAnnotationView.drawRect (Terserah.CustomAnnotationView)(C.CGRect) -&gt; ()"
+                  moduleName = "Terserah"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
+                  timestampString = "459806394.497468"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Terserah.CustomAnnotationView.drawRect (Terserah.CustomAnnotationView)(C.CGRect) -&gt; ()"
+                  moduleName = "Terserah"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
+                  timestampString = "459806394.497652"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -55,74 +117,124 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Terserah/Controller/navigationBarViewController.swift"
-            timestampString = "459368083.091869"
+            filePath = "Terserah/AppDelegate.swift"
+            timestampString = "459717429.168613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "navigationBarViewController"
-            landmarkType = "3">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Terserah.navigationBarViewController.bgImageView.getter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  symbolName = "Terserah.AppDelegate.application (Terserah.AppDelegate)(ObjectiveC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;ObjectiveC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool"
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/navigationBarViewController.swift"
-                  timestampString = "459373560.100385"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/AppDelegate.swift"
+                  timestampString = "459806394.654793"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Terserah.navigationBarViewController.bgImageView.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  symbolName = "@objc Terserah.AppDelegate.application (Terserah.AppDelegate)(ObjectiveC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;ObjectiveC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool"
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/navigationBarViewController.swift"
-                  timestampString = "459373560.10068"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/AppDelegate.swift"
+                  timestampString = "459806394.654947"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "167">
                </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Terserah/ViewController.swift"
+            timestampString = "459805749.86965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "motionEnded(_:withEvent:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Terserah/Controller/MenuBarViewController.swift"
+            timestampString = "459806172.70522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "closeButton(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Terserah/Controller/MenuBarViewController.swift"
+            timestampString = "459806315.321428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "closeButton(_:)"
+            landmarkType = "5">
+            <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Terserah.navigationBarViewController.bgImageView.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  symbolName = "Terserah.MenuBarViewController.closeButton (Terserah.MenuBarViewController)(Swift.AnyObject) -&gt; ()"
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/navigationBarViewController.swift"
-                  timestampString = "459373560.101111"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Terserah.navigationBarViewController.init (Terserah.navigationBarViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Terserah.navigationBarViewController"
-                  moduleName = "Terserah"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/navigationBarViewController.swift"
-                  timestampString = "459373560.101553"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/MenuBarViewController.swift"
+                  timestampString = "459806394.659306"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Terserah.MenuBarViewController.closeButton (Terserah.MenuBarViewController)(Swift.AnyObject) -&gt; ()"
+                  moduleName = "Terserah"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/MenuBarViewController.swift"
+                  timestampString = "459806394.659497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "23">
                </Location>
             </Locations>
          </BreakpointContent>
