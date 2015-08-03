@@ -56,7 +56,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
-                  timestampString = "459806394.496766"
+                  timestampString = "459869220.597004"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -71,7 +71,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
-                  timestampString = "459806394.497019"
+                  timestampString = "459869220.597336"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -86,7 +86,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
-                  timestampString = "459806394.497468"
+                  timestampString = "459869220.597757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -101,7 +101,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/CustomAnnotationView.swift"
-                  timestampString = "459806394.497652"
+                  timestampString = "459869220.598034"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -134,7 +134,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/AppDelegate.swift"
-                  timestampString = "459806394.654793"
+                  timestampString = "459869220.610828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -149,7 +149,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/AppDelegate.swift"
-                  timestampString = "459806394.654947"
+                  timestampString = "459869220.611429"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -157,22 +157,6 @@
                   offsetFromSymbolStart = "167">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Terserah/ViewController.swift"
-            timestampString = "459805749.86965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "motionEnded(_:withEvent:)"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -214,7 +198,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/MenuBarViewController.swift"
-                  timestampString = "459806394.659306"
+                  timestampString = "459869220.839951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -229,7 +213,7 @@
                   moduleName = "Terserah"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/febria/ios_programming/Terserah/Terserah/Controller/MenuBarViewController.swift"
-                  timestampString = "459806394.659497"
+                  timestampString = "459869220.840242"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"

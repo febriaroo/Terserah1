@@ -23,7 +23,7 @@ class MenuBarViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //self.modalPresentationStyle = UIModalPresentationCurrentContext
         // Do any additional setup after loading the view.
     }
 

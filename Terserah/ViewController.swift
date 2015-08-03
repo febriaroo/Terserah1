@@ -18,9 +18,11 @@ import Darwin // For random number
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    // Name and address bar (Buttom one)
+    //direction
+    var dir : MKDirections!
+    var poly : MKPolyline!
     
-
+    @IBOutlet weak var buttomView: UIView!
     @IBOutlet weak var nameLocationButtom: UILabel!
     @IBOutlet weak var addressLocationButtom: UILabel!
 
@@ -44,6 +46,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     // direction
     var directionku: [String]!
     
+    @IBOutlet weak var businessView: UIImageView!
+    @IBOutlet weak var ratingImage: UIImageView!
     // PM
     var pm: CLPlacemark!
     
@@ -65,20 +69,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //get UserLocation
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.mapView.showsUserLocation = true
+        self.mapView.userLocation.title = "I'm Here!"
+        self.locationManager.startUpdatingLocation()
+        
+        self.locationManager.delegate = self
+        self.mapView.delegate = self
+        
+        //let heightku = bawah.frame.origin.y
+        //businessView.frame = CGRectMake(bawah.frame.width/2, heightku, 128, 128)
+        
         
         let navBackgroundImage:UIImage! = UIImage(named: "testing")
-        
-        if countShake == 0 {
-            actionSheetController.show()
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     //MARK: function to get the Update Location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -125,7 +137,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         var concatLocation = "" + location_lat + "," + location_long
         
-        Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, location: concatLocation, category: ["asianfusion", "burgers"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
+        Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, location: concatLocation, category: ["asianfusion"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
             self.businesses = Restaurant
             
             var businessCount: Int = Restaurant.count
@@ -159,8 +171,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     
                     directionRequest.setDestination(destMKMap)
                     
-                    let dir = MKDirections(request: directionRequest)
-                    dir.calculateDirectionsWithCompletionHandler() {
+                    self.dir = MKDirections(request: directionRequest)
+                    self.dir.calculateDirectionsWithCompletionHandler() {
                         (response:MKDirectionsResponse!, error:NSError!) in
                         if response == nil {
                             println(error)
@@ -168,14 +180,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         }
                         println("got directions")
                         let route = response.routes[0] as! MKRoute
-                        let poly = route.polyline
-                        self.mapView.addOverlay(poly)
+                        self.poly = route.polyline
+                        
+                        self.mapView.addOverlay(self.poly)
                         for step in route.steps {
                             println("After \(step.distance) metres: \(step.instructions)")
                         }
                         // update label
                         self.nameLocationButtom.text = business.businessName
                         self.addressLocationButtom.text = business.businessAddress
+                        self.showImageRatingFromYelp(business.businessUrl)
+                        self.showBusinessImageRatingFromYelp(business.businessImageUrl)
                     }
                     break
                 }
@@ -217,7 +232,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         return customAnnotationView
     }
-    
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         var v : MKPolylineRenderer! = nil
         if let overlay = overlay as? MKPolyline {
@@ -238,21 +252,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
         
         if motion == .MotionShake {
-            //get UserLocation
-            self.locationManager.delegate = self
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.requestWhenInUseAuthorization()
-            self.mapView.showsUserLocation = true
-            self.mapView.delegate = self
-            self.mapView.userLocation.title = "I'm Here!"
-            self.locationManager.startUpdatingLocation()
             countShake++
-            // show messagebox to shake it
-            actionSheetController.dismissWithClickedButtonIndex(-1, animated: true)
             
+            // show messagebox to shake it
+            //actionSheetController.dismissWithClickedButtonIndex(-1, animated: true)
+            //actionSheetController.delegate!.alertView!(actionSheetController, clickedButtonAtIndex: 1)
             let annotationsToRemove = mapView.annotations.filter { $0 !== self.mapView.userLocation }
             mapView.removeAnnotations( annotationsToRemove )
             
+            self.mapView.removeOverlay(self.poly)
             self.getData("\(mapView.userLocation.location.coordinate.latitude)",location_long : "\(mapView.userLocation.location.coordinate.longitude)")
         
         }
@@ -281,6 +289,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapItem.name = "\(venueName)"
         mapItem.openInMapsWithLaunchOptions(options)
         
+        //self.businessView.image = UIImage(data:)
+    }
+    
+    func showImageRatingFromYelp(imgUrl: NSURL!)
+    {
+        let request: NSURLRequest = NSURLRequest(URL: imgUrl)
+        NSURLConnection.sendAsynchronousRequest(
+            request, queue: NSOperationQueue.mainQueue(),
+            completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    self.ratingImage.image = UIImage(data: data)
+                    
+                }
+        })
+    }
+    func showBusinessImageRatingFromYelp(imgUrl: NSURL!)
+    {
+        
+        let request: NSURLRequest = NSURLRequest(URL: imgUrl)
+        NSURLConnection.sendAsynchronousRequest(
+            request, queue: NSOperationQueue.mainQueue(),
+            completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    self.businessView.image = UIImage(data: data)
+                    //create shape
+                    self.businessView.layer.borderWidth = 1
+                    self.businessView.layer.masksToBounds = false
+                    self.businessView.layer.borderColor = UIColor.blackColor().CGColor
+                    self.businessView.layer.cornerRadius = self.businessView.frame.height/2
+                    self.businessView.clipsToBounds = true
+                }
+        })
+
     }
 }
 

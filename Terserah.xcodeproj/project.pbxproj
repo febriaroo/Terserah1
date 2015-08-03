@@ -16,7 +16,6 @@
 		894D37561B667B1900A597AD /* customPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373B1B667B1900A597AD /* customPointAnnotation.swift */; };
 		894D37571B667B1900A597AD /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373C1B667B1900A597AD /* NavigationCell.swift */; };
 		894D37581B667B1900A597AD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373D1B667B1900A597AD /* Restaurant.swift */; };
-		894D37591B667B1900A597AD /* YelpApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373E1B667B1900A597AD /* YelpApi.swift */; };
 		894D375A1B667B1900A597AD /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37401B667B1900A597AD /* CustomAnnotationView.swift */; };
 		894D375C1B667B1900A597AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894D37421B667B1900A597AD /* Images.xcassets */; };
 		894D375D1B667B1900A597AD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 894D37431B667B1900A597AD /* Info.plist */; };
@@ -57,8 +56,7 @@
 		894D373A1B667B1900A597AD /* customAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customAnnotation.swift; sourceTree = "<group>"; };
 		894D373B1B667B1900A597AD /* customPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customPointAnnotation.swift; sourceTree = "<group>"; };
 		894D373C1B667B1900A597AD /* NavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
-		894D373D1B667B1900A597AD /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		894D373E1B667B1900A597AD /* YelpApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpApi.swift; sourceTree = "<group>"; };
+		894D373D1B667B1900A597AD /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = ../Class/Restaurant.swift; sourceTree = "<group>"; };
 		894D37401B667B1900A597AD /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAnnotationView.swift; path = ../Controller/CustomAnnotationView.swift; sourceTree = "<group>"; };
 		894D37421B667B1900A597AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		894D37431B667B1900A597AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,8 +176,6 @@
 				894D373A1B667B1900A597AD /* customAnnotation.swift */,
 				894D373B1B667B1900A597AD /* customPointAnnotation.swift */,
 				894D373C1B667B1900A597AD /* NavigationCell.swift */,
-				894D373D1B667B1900A597AD /* Restaurant.swift */,
-				894D373E1B667B1900A597AD /* YelpApi.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -197,6 +193,7 @@
 		894D37441B667B1900A597AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				894D373D1B667B1900A597AD /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,7 +421,6 @@
 				894D37601B667B1900A597AD /* TransitOperator.swift in Sources */,
 				894D37551B667B1900A597AD /* customAnnotation.swift in Sources */,
 				894D37561B667B1900A597AD /* customPointAnnotation.swift in Sources */,
-				894D37591B667B1900A597AD /* YelpApi.swift in Sources */,
 				894D37581B667B1900A597AD /* Restaurant.swift in Sources */,
 				894D37511B667B1900A597AD /* YelpAPI.swift in Sources */,
 				8979E07C1B681492003957C1 /* MenuBarViewController.swift in Sources */,

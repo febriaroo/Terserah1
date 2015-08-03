@@ -16,6 +16,7 @@ class Restaurant: NSObject {
     var businessCoordinateLongitude : Double!
     var businessCoordinateLatitude : Double!
     var businessUrl : NSURL!
+    var businessImageUrl : NSURL!
     var businessPhone : String!
     var businessAddress : String!
     
@@ -25,11 +26,17 @@ class Restaurant: NSObject {
         businessId = dictionary["id"] as? String
         businessName = dictionary["name"] as? String
         
-        let imgBusinessURL = dictionary["image_url"] as? String
-        if(imgBusinessURL != nil){
-            businessUrl = NSURL(string: imgBusinessURL!)
+        let ratingBusinessURL = dictionary["rating_img_url_small"] as? String
+        if(ratingBusinessURL != nil){
+            businessUrl = NSURL(string: ratingBusinessURL!)
         } else {
             businessUrl = nil
+        }
+        let imgBusinessURL = dictionary["image_url"] as? String
+        if(imgBusinessURL != nil){
+            businessImageUrl = NSURL(string: imgBusinessURL!)
+        } else {
+            businessImageUrl = nil
         }
         
         let location = dictionary["location"] as? NSDictionary

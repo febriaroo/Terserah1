@@ -74,9 +74,9 @@ class YelpAPI: BDBOAuth1RequestOperationManager{
         var parameters: [String : AnyObject]
         // Default the location to San Francisco
         if location != nil {
-            parameters = ["term": term, "ll": location, "radius": "5000"]
+            parameters = ["term": term, "ll": location, "radius": "10000"]
         } else {
-            parameters = ["term": term, "ll": "40.7460424,-74.0068579", "radius": "5000"]
+            parameters = ["term": term, "ll": "40.7460424,-74.0068579", "radius": "500"]
             
         }
         
