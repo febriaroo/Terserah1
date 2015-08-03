@@ -13,7 +13,7 @@ import CoreLocation // For Get the user location
 import MapKit // For Showing Maps
 import OAuthSwift // For Oauth Request
 import Darwin // For random number
-
+import RESideMenu
 
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
@@ -26,6 +26,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var nameLocationButtom: UILabel!
     @IBOutlet weak var addressLocationButtom: UILabel!
 
+    
+    
     // Navigation Bar Items
     @IBOutlet weak var navBar: UINavigationBar!
     
@@ -61,6 +63,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var restaurantName:String!
     var restaurantLong:Double!
     var restaurantLat:Double!
+    
+    
+    //sidemenu
+    
+    
     
     @IBAction func DirectionClick(sender: AnyObject) {
         if restaurantName != nil && restaurantLong != nil && restaurantLat != nil  {
@@ -137,7 +144,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         var concatLocation = "" + location_lat + "," + location_long
         
-        Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, location: concatLocation, category: ["asianfusion"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
+        Restaurant.getRealDataFromYelp("Restaurants", sort: .Distance, location: concatLocation, category: ["restaurants"]) { (Restaurant: [Restaurant]!, error: NSError!) -> Void in
             self.businesses = Restaurant
             
             var businessCount: Int = Restaurant.count
@@ -167,19 +174,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     let destMKMap = MKMapItem(placemark: self.myDestination)!
                     
                     var directionRequest:MKDirectionsRequest = MKDirectionsRequest()
+                    
                     directionRequest.setSource(MKMapItem.mapItemForCurrentLocation())
                     
                     directionRequest.setDestination(destMKMap)
                     
                     self.dir = MKDirections(request: directionRequest)
+                    
                     self.dir.calculateDirectionsWithCompletionHandler() {
                         (response:MKDirectionsResponse!, error:NSError!) in
                         if response == nil {
                             println(error)
                             return
                         }
+                        
                         println("got directions")
                         let route = response.routes[0] as! MKRoute
+                        
                         self.poly = route.polyline
                         
                         self.mapView.addOverlay(self.poly)
@@ -316,7 +327,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     //create shape
                     self.businessView.layer.borderWidth = 1
                     self.businessView.layer.masksToBounds = false
-                    self.businessView.layer.borderColor = UIColor.blackColor().CGColor
+                    self.businessView.layer.borderColor = UIColor.clearColor().CGColor
                     self.businessView.layer.cornerRadius = self.businessView.frame.height/2
                     self.businessView.clipsToBounds = true
                 }

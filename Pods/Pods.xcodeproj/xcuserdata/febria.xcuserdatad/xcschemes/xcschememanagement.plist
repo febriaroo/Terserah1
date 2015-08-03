@@ -14,6 +14,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RESideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>98E7B083CA038065F904A281</key>
+		<key>04879C0F06AC7B91E95C16D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AAB6CB98E4489AC43CF98ABB</key>
+		<key>2B3348996655F723AB9F0FB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8E3136FE453B895CF1DFA46</key>
+		<key>4090793696101F8E54F293FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>580D91DD27A1FC8BDF801329</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E36E569C8D75A61E4A2B04E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFB202EBF39C7C00F25C6E24</key>
 		<dict>
 			<key>primary</key>
 			<true/>

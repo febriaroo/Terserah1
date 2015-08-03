@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		69C98E94442EE162DCBC012A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535F74881E309AD9B181B24 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		890B78771B6FE93D00CBDB36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890B78761B6FE93D00CBDB36 /* RootViewController.swift */; };
+		890B787A1B6FEC0800CBDB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890B78781B6FEC0800CBDB36 /* Main.storyboard */; };
 		8937B4251B55505700AD568F /* TerserahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4241B55505700AD568F /* TerserahTests.swift */; };
 		8937B4321B55575900AD568F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8937B4311B55575900AD568F /* MapKit.framework */; };
 		894D37511B667B1900A597AD /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37331B667B1900A597AD /* YelpAPI.swift */; };
@@ -24,9 +26,9 @@
 		894D37601B667B1900A597AD /* TransitOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D374E1B667B1900A597AD /* TransitOperator.swift */; };
 		894D37611B667B1900A597AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37501B667B1900A597AD /* ViewController.swift */; };
 		8979E07C1B681492003957C1 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979E07B1B681492003957C1 /* MenuBarViewController.swift */; };
-		897C4AB81B6688BD00A193EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894D37371B667B1900A597AD /* Main.storyboard */; };
 		897C4AB91B6688C200A193EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894D37351B667B1900A597AD /* LaunchScreen.xib */; };
 		897C4ABD1B66A5CD00A193EE /* ListDirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */; };
+		89B679271B6FF5C100CB1B1F /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B679261B6FF5C100CB1B1F /* setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		4C5234D27C52A3C567B07947 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7535F74881E309AD9B181B24 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwift_Bridging_Header.h; sourceTree = "<group>"; };
+		890B78761B6FE93D00CBDB36 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		890B78791B6FEC0800CBDB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8937B4061B55505700AD568F /* Terserah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terserah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937B41E1B55505700AD568F /* TerserahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerserahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937B4231B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +56,6 @@
 		894D37331B667B1900A597AD /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
 		894D37341B667B1900A597AD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894D37361B667B1900A597AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		894D37381B667B1900A597AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		894D373A1B667B1900A597AD /* customAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customAnnotation.swift; sourceTree = "<group>"; };
 		894D373B1B667B1900A597AD /* customPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customPointAnnotation.swift; sourceTree = "<group>"; };
 		894D373C1B667B1900A597AD /* NavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCell.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		894D37501B667B1900A597AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		8979E07B1B681492003957C1 /* MenuBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
 		897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDirectionViewController.swift; sourceTree = "<group>"; };
+		89B679261B6FF5C100CB1B1F /* setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
 		A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +149,7 @@
 				894D37321B667B1900A597AD /* API */,
 				894D37341B667B1900A597AD /* AppDelegate.swift */,
 				894D37351B667B1900A597AD /* LaunchScreen.xib */,
-				894D37371B667B1900A597AD /* Main.storyboard */,
+				890B78781B6FEC0800CBDB36 /* Main.storyboard */,
 				894D37391B667B1900A597AD /* Class */,
 				894D373F1B667B1900A597AD /* Controller */,
 				894D37421B667B1900A597AD /* Images.xcassets */,
@@ -186,6 +190,7 @@
 				894D37501B667B1900A597AD /* ViewController.swift */,
 				897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */,
 				8979E07B1B681492003957C1 /* MenuBarViewController.swift */,
+				890B78761B6FE93D00CBDB36 /* RootViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				894D373D1B667B1900A597AD /* Restaurant.swift */,
+				89B679261B6FF5C100CB1B1F /* setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				897C4AB91B6688C200A193EE /* LaunchScreen.xib in Resources */,
-				897C4AB81B6688BD00A193EE /* Main.storyboard in Resources */,
+				890B787A1B6FEC0800CBDB36 /* Main.storyboard in Resources */,
 				894D375E1B667B1900A597AD /* Podfile in Resources */,
 				894D375C1B667B1900A597AD /* Images.xcassets in Resources */,
 				894D375D1B667B1900A597AD /* Info.plist in Resources */,
@@ -417,11 +423,13 @@
 				894D37611B667B1900A597AD /* ViewController.swift in Sources */,
 				894D375F1B667B1900A597AD /* Terserah.xcdatamodeld in Sources */,
 				894D37521B667B1900A597AD /* AppDelegate.swift in Sources */,
+				890B78771B6FE93D00CBDB36 /* RootViewController.swift in Sources */,
 				894D37571B667B1900A597AD /* NavigationCell.swift in Sources */,
 				894D37601B667B1900A597AD /* TransitOperator.swift in Sources */,
 				894D37551B667B1900A597AD /* customAnnotation.swift in Sources */,
 				894D37561B667B1900A597AD /* customPointAnnotation.swift in Sources */,
 				894D37581B667B1900A597AD /* Restaurant.swift in Sources */,
+				89B679271B6FF5C100CB1B1F /* setting.swift in Sources */,
 				894D37511B667B1900A597AD /* YelpAPI.swift in Sources */,
 				8979E07C1B681492003957C1 /* MenuBarViewController.swift in Sources */,
 				894D375A1B667B1900A597AD /* CustomAnnotationView.swift in Sources */,
@@ -447,20 +455,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		890B78781B6FEC0800CBDB36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				890B78791B6FEC0800CBDB36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		894D37351B667B1900A597AD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				894D37361B667B1900A597AD /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		894D37371B667B1900A597AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				894D37381B667B1900A597AD /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

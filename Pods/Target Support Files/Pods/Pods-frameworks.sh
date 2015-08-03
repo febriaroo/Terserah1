@@ -50,8 +50,14 @@ code_sign() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'AFNetworking.framework'
   install_framework 'BDBOAuth1Manager.framework'
+  install_framework 'RESideMenu.framework'
+  install_framework 'Realm.framework'
+  install_framework 'RealmSwift.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'AFNetworking.framework'
   install_framework 'BDBOAuth1Manager.framework'
+  install_framework 'RESideMenu.framework'
+  install_framework 'Realm.framework'
+  install_framework 'RealmSwift.framework'
 fi
