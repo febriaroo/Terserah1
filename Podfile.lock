@@ -35,7 +35,7 @@ DEPENDENCIES:
   - BDBOAuth1Manager
   - Realm (from `https://github.com/realm/realm-cocoa.git`, branch `swift-2.0`)
   - RealmSwift
-  - RESideMenu (~> 4.0.7)
+  - RESideMenu
 
 EXTERNAL SOURCES:
   Realm:

@@ -28,7 +28,12 @@
 		8979E07C1B681492003957C1 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979E07B1B681492003957C1 /* MenuBarViewController.swift */; };
 		897C4AB91B6688C200A193EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894D37351B667B1900A597AD /* LaunchScreen.xib */; };
 		897C4ABD1B66A5CD00A193EE /* ListDirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */; };
+		89B288591B70F663007B63B9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B288581B70F663007B63B9 /* Reachability.swift */; };
 		89B679271B6FF5C100CB1B1F /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B679261B6FF5C100CB1B1F /* setting.swift */; };
+		89E2A2421B7A3B7A00A5A83F /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 89E2A2411B7A3B7A00A5A83F /* GoogleService-Info (1).plist */; };
+		89E2A2AF1B7A448000A5A83F /* libFlurry_6.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E2A2AE1B7A448000A5A83F /* libFlurry_6.7.0.a */; };
+		89E2A2B11B7A44A100A5A83F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E2A2B01B7A44A100A5A83F /* Security.framework */; };
+		89E2A2B31B7A44BD00A5A83F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E2A2B21B7A44BD00A5A83F /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +76,13 @@
 		894D37501B667B1900A597AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		8979E07B1B681492003957C1 /* MenuBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
 		897C4ABC1B66A5CD00A193EE /* ListDirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDirectionViewController.swift; sourceTree = "<group>"; };
+		89B288581B70F663007B63B9 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		89B679261B6FF5C100CB1B1F /* setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		89E2A2411B7A3B7A00A5A83F /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		89E2A2AD1B7A448000A5A83F /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		89E2A2AE1B7A448000A5A83F /* libFlurry_6.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.7.0.a; sourceTree = "<group>"; };
+		89E2A2B01B7A44A100A5A83F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		89E2A2B21B7A44BD00A5A83F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +91,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E2A2B31B7A44BD00A5A83F /* SystemConfiguration.framework in Frameworks */,
+				89E2A2B11B7A44A100A5A83F /* Security.framework in Frameworks */,
 				8937B4321B55575900AD568F /* MapKit.framework in Frameworks */,
+				89E2A2AF1B7A448000A5A83F /* libFlurry_6.7.0.a in Frameworks */,
 				69C98E94442EE162DCBC012A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +160,8 @@
 		894D37311B667B1900A597AD /* Terserah */ = {
 			isa = PBXGroup;
 			children = (
+				89E2A2AD1B7A448000A5A83F /* Flurry.h */,
+				89E2A2AE1B7A448000A5A83F /* libFlurry_6.7.0.a */,
 				894D37321B667B1900A597AD /* API */,
 				894D37341B667B1900A597AD /* AppDelegate.swift */,
 				894D37351B667B1900A597AD /* LaunchScreen.xib */,
@@ -180,6 +196,7 @@
 				894D373A1B667B1900A597AD /* customAnnotation.swift */,
 				894D373B1B667B1900A597AD /* customPointAnnotation.swift */,
 				894D373C1B667B1900A597AD /* NavigationCell.swift */,
+				89B288581B70F663007B63B9 /* Reachability.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -238,6 +255,7 @@
 		894D374F1B667B1900A597AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89E2A2411B7A3B7A00A5A83F /* GoogleService-Info (1).plist */,
 				894D37401B667B1900A597AD /* CustomAnnotationView.swift */,
 			);
 			path = View;
@@ -254,6 +272,8 @@
 		B8D9B43CAD5B9ADC71BF43F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89E2A2B21B7A44BD00A5A83F /* SystemConfiguration.framework */,
+				89E2A2B01B7A44A100A5A83F /* Security.framework */,
 				89420E311B56F90700579D89 /* AFNetworking.framework */,
 				895AE7791B56F10D00C215E7 /* Target Support Files */,
 				7535F74881E309AD9B181B24 /* Pods.framework */,
@@ -350,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				897C4AB91B6688C200A193EE /* LaunchScreen.xib in Resources */,
+				89E2A2421B7A3B7A00A5A83F /* GoogleService-Info (1).plist in Resources */,
 				890B787A1B6FEC0800CBDB36 /* Main.storyboard in Resources */,
 				894D375E1B667B1900A597AD /* Podfile in Resources */,
 				894D375C1B667B1900A597AD /* Images.xcassets in Resources */,
@@ -427,6 +448,7 @@
 				894D37571B667B1900A597AD /* NavigationCell.swift in Sources */,
 				894D37601B667B1900A597AD /* TransitOperator.swift in Sources */,
 				894D37551B667B1900A597AD /* customAnnotation.swift in Sources */,
+				89B288591B70F663007B63B9 /* Reachability.swift in Sources */,
 				894D37561B667B1900A597AD /* customPointAnnotation.swift in Sources */,
 				894D37581B667B1900A597AD /* Restaurant.swift in Sources */,
 				89B679271B6FF5C100CB1B1F /* setting.swift in Sources */,
@@ -576,6 +598,10 @@
 				INFOPLIST_FILE = Terserah/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Terserah",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -607,6 +633,10 @@
 				INFOPLIST_FILE = Terserah/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Terserah",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

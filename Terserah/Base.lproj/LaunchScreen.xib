@@ -10,96 +10,54 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright (c) 2015 Febria Roosita Dwi. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="695" width="375" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terserah" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                    <rect key="frame" x="130" y="86" width="153" height="40.5"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="icontransparent" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-gB-VUx">
+                    <rect key="frame" x="103" y="215" width="207" height="194"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Copyright (c) 2015 Febria Roosita Dwi. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                    <rect key="frame" x="29" y="719" width="355.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple way to choose your restaurant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WRd-4U-3SW">
+                    <rect key="frame" x="62" y="134" width="290" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terserah" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="88" width="375" height="43"/>
-                    <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="only by shaking your phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pea-IT-FzX">
+                    <rect key="frame" x="101" y="162" width="211" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet107" translatesAutoresizingMaskIntoConstraints="NO" id="OUg-jR-6fI">
-                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet102" translatesAutoresizingMaskIntoConstraints="NO" id="59r-iU-HUg">
-                    <rect key="frame" x="381" y="73" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candy4" translatesAutoresizingMaskIntoConstraints="NO" id="eHx-Xg-Wgq">
-                    <rect key="frame" x="337" y="246" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet99" translatesAutoresizingMaskIntoConstraints="NO" id="eSG-UL-YB9">
-                    <rect key="frame" x="-332" y="103" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet108" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-qC-ddw">
-                    <rect key="frame" x="70" y="160" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baker17" translatesAutoresizingMaskIntoConstraints="NO" id="39b-xl-Kc5">
-                    <rect key="frame" x="205" y="199" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dessert39" translatesAutoresizingMaskIntoConstraints="NO" id="Avi-5x-sTi">
-                    <rect key="frame" x="26" y="295" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dessert42" translatesAutoresizingMaskIntoConstraints="NO" id="4KY-qI-bpy">
-                    <rect key="frame" x="152" y="339" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet100" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-kT-GZK">
-                    <rect key="frame" x="76" y="413" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet96" translatesAutoresizingMaskIntoConstraints="NO" id="HLm-I8-AL2">
-                    <rect key="frame" x="195" y="612" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet111" translatesAutoresizingMaskIntoConstraints="NO" id="rGY-q2-0LC">
-                    <rect key="frame" x="276" y="428" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet99" translatesAutoresizingMaskIntoConstraints="NO" id="o9v-vb-Ebc">
-                    <rect key="frame" x="26" y="551" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet113" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-2A-QEX">
-                    <rect key="frame" x="337" y="503" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet112" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-4m-ea1">
-                    <rect key="frame" x="326" y="657" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snack10" translatesAutoresizingMaskIntoConstraints="NO" id="a9Z-Oa-4zw">
-                    <rect key="frame" x="-332" y="657" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet97" translatesAutoresizingMaskIntoConstraints="NO" id="gjJ-gD-wH6">
-                    <rect key="frame" x="-208" y="706" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dessert41" translatesAutoresizingMaskIntoConstraints="NO" id="pZ2-SX-r9I">
-                    <rect key="frame" x="342" y="151" width="58" height="58"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweet105" translatesAutoresizingMaskIntoConstraints="NO" id="saD-bn-kSh">
-                    <rect key="frame" x="259" y="14" width="58" height="58"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.9647059440612793" green="0.87450987100601196" blue="0.87450987100601196" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="pea-IT-FzX" secondAttribute="centerX" id="2NP-Ej-BLH"/>
+                <constraint firstAttribute="centerX" secondItem="pea-IT-FzX" secondAttribute="centerX" id="566-Uj-SiG"/>
+                <constraint firstItem="xk7-gB-VUx" firstAttribute="top" secondItem="pea-IT-FzX" secondAttribute="bottom" constant="32.5" id="PrD-KT-MUu"/>
+                <constraint firstItem="WRd-4U-3SW" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="8" id="QDx-QL-z1d"/>
+                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="WDG-yx-bJv"/>
+                <constraint firstAttribute="centerX" secondItem="xk7-gB-VUx" secondAttribute="centerX" id="XX4-vb-eXd"/>
+                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="fmZ-mo-wfV"/>
+                <constraint firstItem="pea-IT-FzX" firstAttribute="top" secondItem="WRd-4U-3SW" secondAttribute="bottom" constant="7.5" id="jJ8-UN-XIb"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="86" id="sdC-rN-3CI"/>
+                <constraint firstAttribute="centerX" secondItem="WRd-4U-3SW" secondAttribute="centerX" id="wJ9-jb-cLz"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" id="x9a-pZ-XRY"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
     <resources>
-        <image name="baker17" width="512" height="512"/>
-        <image name="candy4" width="512" height="512"/>
-        <image name="dessert39" width="512" height="512"/>
-        <image name="dessert41" width="512" height="512"/>
-        <image name="dessert42" width="512" height="512"/>
-        <image name="snack10" width="512" height="512"/>
-        <image name="sweet100" width="512" height="512"/>
-        <image name="sweet102" width="512" height="512"/>
-        <image name="sweet105" width="512" height="512"/>
-        <image name="sweet107" width="512" height="512"/>
-        <image name="sweet108" width="512" height="512"/>
-        <image name="sweet111" width="512" height="512"/>
-        <image name="sweet112" width="512" height="512"/>
-        <image name="sweet113" width="512" height="512"/>
-        <image name="sweet96" width="512" height="512"/>
-        <image name="sweet97" width="512" height="512"/>
-        <image name="sweet99" width="512" height="512"/>
+        <image name="icontransparent" width="207" height="194"/>
     </resources>
 </document>

@@ -17,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // Configure tracker from GoogleService-Info.plist.
         
-        
-        
+        Flurry.startSession("SFNBXNVTPRBRMSH9B3MH");
+        Flurry.logEvent("Started Application");
         return true
     }
 
@@ -109,6 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
 
 }
 

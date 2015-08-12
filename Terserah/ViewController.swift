@@ -13,11 +13,12 @@ import CoreLocation // For Get the user location
 import MapKit // For Showing Maps
 import OAuthSwift // For Oauth Request
 import Darwin // For random number
-import RESideMenu
+import iAd
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, ADBannerViewDelegate {
     
+    @IBOutlet weak var AdBannerView: ADBannerView!
     //direction
     var dir : MKDirections!
     var poly : MKPolyline!
@@ -76,24 +77,57 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        Flurry.startSession("SFNBXNVTPRBRMSH9B3MH")
+        Flurry.logEvent("")
         
-        //get UserLocation
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-        self.mapView.showsUserLocation = true
-        self.mapView.userLocation.title = "I'm Here!"
-        self.locationManager.startUpdatingLocation()
-        
-        self.locationManager.delegate = self
-        self.mapView.delegate = self
-        
-        //let heightku = bawah.frame.origin.y
-        //businessView.frame = CGRectMake(bawah.frame.width/2, heightku, 128, 128)
+        self.canDisplayBannerAds = true
+        self.AdBannerView.delegate = self
+        self.AdBannerView.hidden = true
         
         
-        let navBackgroundImage:UIImage! = UIImage(named: "testing")
+        if Reachability.isConnectedToNetwork() == true {
+            println("Internet connection OK")
+            //get UserLocation
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.requestWhenInUseAuthorization()
+            self.mapView.showsUserLocation = true
+            self.mapView.userLocation.title = "I'm Here!"
+            self.locationManager.startUpdatingLocation()
+            
+            self.locationManager.delegate = self
+            self.mapView.delegate = self
+            
+            //let heightku = bawah.frame.origin.y
+            //businessView.frame = CGRectMake(bawah.frame.width/2, heightku, 128, 128)
+            
+            
+            let navBackgroundImage:UIImage! = UIImage(named: "testing")
+        
+        } else {
+            println("Internet connection FAILED")
+            var alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        
     }
-
+    
+    //ads
+    func bannerViewWillLoadAd(banner: ADBannerView!) {
+        
+    }
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        self.AdBannerView?.hidden = false
+    }
+    func bannerViewActionDidFinish(banner: ADBannerView!) {
+        
+    }
+    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
+        return true
+    }
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -327,12 +361,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     //create shape
                     self.businessView.layer.borderWidth = 1
                     self.businessView.layer.masksToBounds = false
-                    self.businessView.layer.borderColor = UIColor.clearColor().CGColor
+                    self.businessView.layer.borderColor = UIColor.brownColor().CGColor
                     self.businessView.layer.cornerRadius = self.businessView.frame.height/2
                     self.businessView.clipsToBounds = true
                 }
         })
 
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
     }
 }
 
