@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 import CoreLocation // For Get the user location
 import MapKit // For Showing Maps
-import OAuthSwift // For Oauth Request
 import Darwin // For random number
 import iAd
 

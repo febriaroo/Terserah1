@@ -11,7 +11,6 @@
 		890B78771B6FE93D00CBDB36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890B78761B6FE93D00CBDB36 /* RootViewController.swift */; };
 		890B787A1B6FEC0800CBDB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890B78781B6FEC0800CBDB36 /* Main.storyboard */; };
 		8937B4251B55505700AD568F /* TerserahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8937B4241B55505700AD568F /* TerserahTests.swift */; };
-		8937B4321B55575900AD568F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8937B4311B55575900AD568F /* MapKit.framework */; };
 		894D37511B667B1900A597AD /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37331B667B1900A597AD /* YelpAPI.swift */; };
 		894D37521B667B1900A597AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D37341B667B1900A597AD /* AppDelegate.swift */; };
 		894D37551B667B1900A597AD /* customAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D373A1B667B1900A597AD /* customAnnotation.swift */; };
@@ -56,7 +55,6 @@
 		8937B41E1B55505700AD568F /* TerserahTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerserahTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8937B4231B55505700AD568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8937B4241B55505700AD568F /* TerserahTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerserahTests.swift; sourceTree = "<group>"; };
-		8937B4311B55575900AD568F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		89420E311B56F90700579D89 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/Pods-Terserah/AFNetworking.framework"; sourceTree = "<group>"; };
 		894D37331B667B1900A597AD /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
 		894D37341B667B1900A597AD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			files = (
 				89E2A2B31B7A44BD00A5A83F /* SystemConfiguration.framework in Frameworks */,
 				89E2A2B11B7A44A100A5A83F /* Security.framework in Frameworks */,
-				8937B4321B55575900AD568F /* MapKit.framework in Frameworks */,
 				89E2A2AF1B7A448000A5A83F /* libFlurry_6.7.0.a in Frameworks */,
 				69C98E94442EE162DCBC012A /* Pods.framework in Frameworks */,
 			);
@@ -123,7 +120,6 @@
 			children = (
 				894D37311B667B1900A597AD /* Terserah */,
 				8903C2411B56D66800047634 /* OAuthSwift_Bridging_Header.h */,
-				8937B4311B55575900AD568F /* MapKit.framework */,
 				8937B4211B55505700AD568F /* TerserahTests */,
 				8937B4071B55505700AD568F /* Products */,
 				B8D9B43CAD5B9ADC71BF43F2 /* Frameworks */,
@@ -333,9 +329,10 @@
 				TargetAttributes = {
 					8937B4051B55505700AD568F = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = E34GZ93F8E;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -590,6 +587,7 @@
 			baseConfigurationReference = 4C5234D27C52A3C567B07947 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -617,6 +615,8 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "403dc2bb-b6ea-4eb7-a6a9-b793e6813fb7";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -625,6 +625,7 @@
 			baseConfigurationReference = A3AFB9A3C8ADA31BAC78FA4B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -638,6 +639,8 @@
 					"$(PROJECT_DIR)/Terserah",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "403dc2bb-b6ea-4eb7-a6a9-b793e6813fb7";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

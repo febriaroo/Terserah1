@@ -60,7 +60,7 @@
                                             <constraint firstAttribute="height" constant="10" id="pWB-WD-IjW"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V8-qK-2mk">
+                                    <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V8-qK-2mk">
                                         <rect key="frame" x="529" y="33" width="44" height="44"/>
                                         <state key="normal" image="Directions">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,7 +226,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="168" id="adM-rL-LCL"/>
                                 </constraints>
-                                <string key="text">This app created by Febria Roosita Dwi in Make School Summer Academy during Summer 2015. This app used icon8.com for icon, Yelp API for the data source.  </string>
+                                <string key="text">This app created by Febria Roosita Dwi in Make School Summer Academy during Summer 2015. This app used icons8.com for icons, Yelp API for the data source.  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.94120664985890778" blue="0.69143727603391403" alpha="0.69000000000000006" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
